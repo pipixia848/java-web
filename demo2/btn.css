@@ -1,0 +1,9 @@
+input{
+    width:60px;
+    height: 40px;
+    background-color: #156daf;
+    color: white;
+    font-size: 20px;
+    font-family: '隶书';
+    border: 2px solid green;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    
+    <script>
+        function fun1() {
+            //alert("单击了")
+        }
+        function fun2() {
+            alert("双击了")
+        }
+        /*
+        
+        事件的绑定方式
+            1.通过元素的属性绑定 on****
+            2.通过DOM编程动态绑定
+        
+        一个元素可以同时绑定多个事件
+        
+        onfocus  获取焦点事件
+        onblur 失去焦点
+        onchange
+        
+         */
+        function testFocus() {
+            console.log("获得焦点")
+        }
+        function testBlur() {
+            console.log("失去焦点")
+        }
+        function testChange() {
+            console.log("内容改变")
+        }
+        
+    </script>
+</head>
+<body>
+
+    <form action="01_js引入方式.html" method="get">
+        用户昵称:<input type="text" name="realName"
+                        onfocus="testFocus()"
+                        onblur="testBlur()"
+                        onchange="testChange()"
+        >
+        <br>
+        
+        登录账号:<input type="text" name="logoinName"> <br>
+        <input type="submit" value="注册">
+        <input type="reset" value="清空">
+        
+    </form>
+    
+    <br>
+    <br>
+
+    <input
+            type="button"
+            value="按钮"
+            onclick="fun1()"
+            ondblclick="fun2()"
+    >
+    
+
+</body>
+</html>

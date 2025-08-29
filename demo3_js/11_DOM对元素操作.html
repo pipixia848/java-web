@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+        
+        // 在操作属性时，可直接. 出来修改
+        function change() {
+            var in1 = document.getElementById(`txt1`);
+            in1.value = "你好~~";
+            
+        }
+        
+        // 修改样式时，元素.style.样式名
+        function change2() {
+            var in1 = document.getElementById(`txt1`);
+            in1.value = "我不好";
+            in1.style.color = "deeppink";
+        }
+        
+        // 修改文本 innerHTML 可识别html内容
+        function changetxt() {
+            var in1 = document.getElementById(`div1`);
+            //in1.innerText = "window"
+            in1.innerHTML = "<h1>不好</h1>>";
+        }
+        
+    </script>
+    
+</head>
+<body>
+
+    <input type="text" id="txt1" value="hello">
+    
+    <hr>
+    
+    <div id="div1">
+        hello
+    </div>
+    
+    <hr>
+    
+    <button onclick="change()" ondblclick="change2()">变</button>
+    <button onclick="changetxt()">变文本</button>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        let promise = new Promise((resolve, reject) => {
+            console.log("function invoked");
+            resolve();
+        })
+
+        promise.then(
+                () => {
+                    // promise转换为resolved状态时，会执行的函数
+                    console.log("promise resolved");
+                }
+                ,
+                () => {
+                    // promise转换为rejected状态时，会执行的函数
+                    console.log("promise reject");
+                }
+        )
+
+        console.log("other code1");
+
+        console.log("other code2");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

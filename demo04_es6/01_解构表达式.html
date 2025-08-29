@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+        let fun1 = () => {} // 箭头函数声明
+        
+        class Person {
+            name;
+            age;
+            
+            
+            get name() {
+                return this.name;
+            }
+            
+            set name(value) {
+                this.name = value;
+            }
+            
+            get age() {
+                return this.age;
+            }
+            
+            set age(value) {
+                this.age = value;
+            }
+            
+            
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+        
+        let person = new Person("小明", 18);
+        console.log(person);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

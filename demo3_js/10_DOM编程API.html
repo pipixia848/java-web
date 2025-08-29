@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <script>
+        /* 直接获取元素
+            通过document可以通过id值获取元素
+                            标签名
+                            name属性值
+                            class属性值
+                            
+            间接获取
+                通过父元素获取子元素
+                通过子元素获取父元素
+                获取兄弟元素
+         */
+        
+        function fun1() {
+            // 根据元素的id值获取页面上的唯一一个元素
+            var el1 = document.getElementById("btn01");
+            console.log(el1);
+        }
+        
+        function fun2() {
+            var el2 = document.getElementById("div1");
+            var cs = el2.children;
+            for (let i = 0; i < cs.length; i++) {
+                console.log(cs[i]);
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <input type="text" id="username" name="aaa">
+        <input type="text" id="username2" name="aaa">
+        <input type="text" id="username3" name="aaa">
+    </div>
+    
+    <hr>
+
+    <input type="button" value="根据id获取指定元素" onclick="fun1()" id="btn01">
+    <input type="button" value="通过父元素获取子元素" onclick="fun2()" id="btn02">
+
+
+</body>
+</html>
